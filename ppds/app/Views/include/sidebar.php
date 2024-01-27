@@ -76,16 +76,22 @@
                             <i class="ti-dashboard"></i> <span>Supervisor</span>
                         </a>
                     </li>
+                    <li id="menu_allppds">
+                        <a href="<?= base_url('admin/allppds'); ?>" aria-expanded="true"><i class="ti-user"></i>
+                                <span>Semua Residen</span>
+                        </a>
+                    </li>
 
                     <li id="menu_users">
                         <a href="javascript:void(0)" aria-expanded="true"><i class="ti-user"></i>
                             <span>Users</span>
                         </a>
+                       
                         <ul class="collapse">
                             <li class="daftar_users">
                                 <a href="<?= base_url('admin/users'); ?>" aria-expanded="true">Daftar Users</a>
                             </li>
-                            <li class="lobby_ppds">
+                            <!-- <li class="lobby_ppds">
                                 <a href="<?= base_url('admin/ppds/lobby'); ?>" aria-expanded="true">
                                     Lobby PPDS
                                     <?php if (countPpdsInLobby() > 0) { ?>
@@ -94,7 +100,7 @@
                                         </span>
                                     <?php } ?>
                                 </a>
-                            </li>
+                            </li> -->
                             <!-- <li>
                                 <a href="#" aria-expanded="true">Tambah Pengguna</a>
                             </li> -->

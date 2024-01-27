@@ -126,7 +126,7 @@ class UserModel extends Model
     {
         $this->builder->select('*,role.role as nama_role,ci_users.id as id_ppds');
         $this->builder->join('role', 'role.id = ci_users.role');
-        $this->builder->where(['aktif' => 1]);
+        // $this->builder->where(['aktif' => 1]);
         $query = $this->builder->get()->getResultArray();
         return $query;
     }
@@ -154,15 +154,11 @@ class UserModel extends Model
 
     public function getPpds()
     {
-        // return $this->builder->getWhere(['role' => 4])->getResultArray();
-        $this->builder->select('*,ci_users.id as id_ppds,stase.stase as nama_stase');
-        $this->builder->join('stase_ppds', 'stase_ppds.id_user = ci_users.id');
-        $this->builder->join('stase', 'stase.id = stase_ppds.id_stase');
-        // $this->builder->join('tahap_ppds', 'tahap_ppds.id_user = ci_users.id');
-        // $this->builder->join('tahap', 'tahap.id = tahap_ppds.id_tahap');
-        $this->builder->where('ci_users.role', 4);
-        $query = $this->builder->get()->getResultArray();
-        return $query;
+        return $this->builder->getWhere(['role' => 4])->getResultArray();
+        // $this->builder->select('*,ci_users.id as id_ppds');
+        // $this->builder->where('ci_users.role', 4);
+        // $query = $this->builder->get()->getResultArray();
+        // return $query;
     }
 
     public function getPpdsWithoutStase()

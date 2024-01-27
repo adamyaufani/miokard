@@ -51,6 +51,13 @@ class Users extends BaseController
         $data['page_header'] = 'Users list';
         return view('admin/users/index', $data);
     }
+    public function allppds()
+    {
+        $data['title'] = 'Semua Residen';
+        $data['query'] = $this->user_model->getPpds();
+        $data['page_header'] = 'Semua Residen';
+        return view('admin/users/residen', $data);
+    }
 
     public function show()
     {

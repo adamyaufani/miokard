@@ -72,6 +72,7 @@ $routes->get('notification/(:num)', 'Notif::detail/$1');
 
 $routes->group('admin', function ($routes) {
 	$routes->get('/', 'Home::index');
+	$routes->get('allppds', 'Admin\Users::allppds');
 	$routes->get('users/(:num)', 'Admin\Users::detail/$1');
 	$routes->get('users/', 'Admin\Users::view');
 	$routes->get('new_users/', 'Admin\Users::newUsersList');

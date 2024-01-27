@@ -126,3 +126,8 @@ nb-configuration.xml
 /phpunit*.xml
 /.phpunit.*.cache
 
+ppds_tugas/*
+ppds_presentasi/*
+qr_code/*
+users_profile_pic/*
+

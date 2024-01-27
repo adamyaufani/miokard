@@ -27,6 +27,28 @@ class Logbook extends BaseController
         return view('logbook/index', $data);
     }
 
+    public function index_json()
+    {
+        $data = [
+            'title' => 'Logbook',
+            'page_header' => 'Logbook PPDS',
+            'query' => $this->logbook_model->getLogbook()
+        ];
+
+        return view('logbook/index', $data);
+    }
+
+    public function index_fiter_json()
+    {
+        $data = [
+            'title' => 'Logbook',
+            'page_header' => 'Logbook PPDS',
+            'query' => $this->logbook_model->getLogbook()
+        ];
+
+        return view('logbook/index', $data);
+    }
+
     public function tambah()
     {
         $data = [
